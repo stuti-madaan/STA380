@@ -1,7 +1,7 @@
 library(mosaic)
 library(foreach)
 
-gdpgrowth = read.csv('../data/gdpgrowth.csv', header=TRUE)
+gdpgrowth = read.csv('E:/Predictive Analytics Summer II/J.Scott/STA380/data/gdpgrowth.csv', header=TRUE)
 head(gdpgrowth)
 
 # Plot the relationship between GDP growth rate and defense spending

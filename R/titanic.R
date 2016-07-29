@@ -1,14 +1,18 @@
 library(mosaic)
-TitanicSurvival = read.csv('../data/TitanicSurvival.csv')
+TitanicSurvival = read.csv('E:/Predictive Analytics Summer II/J.Scott/STA380/data/TitanicSurvival.csv')
 
 # A 2x2 contingency table
-t1 = xtabs(~sex + survived, data=TitanicSurvival)
+t1 = xtabs(~sex+survived  , data=TitanicSurvival)
 t1
-p1 = prop.table(t1, margin=1)
+p1 = prop.table(t1, margin=1) # margin=1 : rows will sum up to 1 
 p1
 
 # Calculate the relative risk of dying for both men and women
 # in terms of the individual cells of the table
+
+
+## Doubt ##
+
 risk_female = p1[1,1]
 risk_male = p1[2,1]
 relative_risk = risk_male/risk_female
